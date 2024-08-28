@@ -1,0 +1,15 @@
+# 파일 경로 지정
+file_path = "/content/YOLOv8-object-tracking-blurring-counting/ultralytics/yolo/v8/detect/deep_sort_pytorch/deep_sort/sort/detection.py"
+
+# 파일 읽어오기
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+# 30번째 줄 수정
+lines[29] = lines[29].replace('np.float', 'np.float64')
+
+# 파일 다시 쓰기
+with open(file_path, 'w') as file:
+    file.writelines(lines)
+
+print("수정 완료!")
